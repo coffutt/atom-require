@@ -2,6 +2,8 @@
 
 Atom package to allow developers quickly add require statements to the file they're working on.
 
+**Pull requests welcome.**
+
 ## Installation
 
 Install through the Settings pane.

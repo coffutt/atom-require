@@ -1,0 +1,25 @@
+{
+  "name": "require",
+  "main": "./index",
+  "version": "0.0.1",
+  "description": "Allows developers to quickly add require statements to code.",
+  "activationEvents": [
+    "require:require"
+  ],
+  "repository": "https://github.com/coffutt/atom-require",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "walk": "^2.3.1",
+    "path": "^0.4.9"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "fs-plus": "^2.0.4",
+    "temp": "^0.7.0",
+    "path": "^0.4.9"
+  }
+}

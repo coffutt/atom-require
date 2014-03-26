@@ -1,0 +1,16 @@
+{
+  "name": "test-package",
+  "version": "0.0.1",
+  "description": "Fake package file for testing atom require lib.",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "require": "~0.0.1",
+    "express": "~0.0.1"
+  },
+  "devDependencies": {
+    "chai": "^0.0.1"
+  }
+}

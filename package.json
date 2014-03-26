@@ -1,7 +1,7 @@
 {
   "name": "require",
   "main": "./index",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Allows developers to quickly add require statements to code.",
   "activationEvents": [
     "require:require"

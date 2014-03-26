@@ -6,7 +6,7 @@
   "activationEvents": [
     "require:require"
   ],
-  "repository": "https://github.com/coffutt/atom-require",
+  "repository": "https://github.com/craig-o/atom-require",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

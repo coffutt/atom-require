@@ -1,5 +1,6 @@
 var util = require('util'),
     path = require('path'),
+    fs = require('fs'),
     PROJECT = 'PROJECT',
     PACKAGE = 'PACKAGE';
 
@@ -15,7 +16,7 @@ var Dependency = function (module, dispName, version, variableName, type) {
 var buildModuleName = function (modulePath, moduleName) {
     var spl = moduleName.split('.'),
         ext = spl.pop(),
-        focusedFilePath = atom.workspace.activePaneItem.getPath(),
+        focusedFilePath = fs.realpathSync(atom.workspace.activePaneItem.getPath()),
         requirePath = '';
 
     if (ext === 'js' || ext === 'coffee') {
@@ -23,7 +24,7 @@ var buildModuleName = function (modulePath, moduleName) {
         //Chop the filename off of the currently focused file full path
         focusedFilePath = focusedFilePath.substring(0, focusedFilePath.lastIndexOf('/')) + '/';
 
-        requirePath = path.relative(focusedFilePath, modulePath + '/' + moduleName);
+        requirePath = path.relative(focusedFilePath, path.join(fs.realpathSync(modulePath), moduleName));
         if (requirePath.substring(0, 1) !== '.') {
             requirePath = './' + requirePath;
         }
